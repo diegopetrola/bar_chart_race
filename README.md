@@ -15,5 +15,5 @@ python -m venv .venv
 3. Install requirements
 
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
