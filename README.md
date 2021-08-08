@@ -5,7 +5,7 @@ _Sources_: [Pew Research Center](https://www.pewforum.org/2015/04/02/religious-p
 
 ## Installation
 
-1. Create a virtual env
+1. Create a python virtual environment
 
 ```
 python -m venv .venv
@@ -13,10 +13,10 @@ python -m venv .venv
 
 2. Activate your virtual environment
 
-3. Install requirements
+3. Install project's requirements
 
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## TODO
