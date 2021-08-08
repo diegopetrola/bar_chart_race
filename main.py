@@ -1,11 +1,8 @@
 import bar_chart_race as bcr
 import pandas as pd
 
-columns = 'chrstprot,chrstcat,chrstorth,chrstang,chrstothr,chrstgen,judorth,jdcons,judref,judothr,judgen,islmsun,islmshi,islmibd,islmnat,islmalw,islmahm,islmothr,islmgen,budmah,budthr,budothr,budgen,zorogen,hindgen,sikhgen,shntgen,bahgen,taogen,jaingen,confgen,syncgen,anmgen,nonrelig,othrgen'
-columns = columns.split(',')
-
-df = pd.read_csv('WRP_global.csv', thousands=',')
-df = df[columns]
+df = pd.read_csv('data.csv')
+df.set_index('year', inplace=True)
 
 bcr.bar_chart_race(
     df=df,
@@ -20,10 +17,10 @@ bcr.bar_chart_race(
     label_bars=True,
     bar_size=.95,
     period_label={'x': .99, 'y': .25, 'ha': 'right', 'va': 'center'},
-    period_fmt='%B %d, %Y',
-    period_summary_func=lambda v, r: {'x': .99, 'y': .18,
-                                      's': f'Total: no idea',
-                                      'ha': 'right', 'size': 8, 'family': 'Courier New'},
+    period_fmt='Year: {x:.0f}',
+    # period_summary_func=lambda v, r: {'x': .99, 'y': .18,
+    #                                   's': f'Year: ',
+    #                                   'ha': 'right', 'size': 8, 'family': 'Courier New'},
     # perpendicular_bar_func='median',
     period_length=500,
     figsize=(5, 3),
