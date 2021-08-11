@@ -76,6 +76,6 @@ def process_images(path: str = '..\imgs'):
 
 
 if __name__ == "__main__":
-    # process_images()
+    process_images()
     # process_data()
     exit(0)
