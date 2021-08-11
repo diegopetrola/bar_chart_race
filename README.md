@@ -21,4 +21,4 @@ pip install -r requirements.txt
 
 ## WARNINGS
 
-- Data about some religions vary wildly among different data sources, take the info with a grain of salt
+- Data about some religions vary wildly among different data sources, take the info presented here with a grain of salt
